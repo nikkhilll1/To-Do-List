@@ -12,8 +12,5 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ],
-  "scripts": {
-    "build": "vite build"
-  }
+  ]
 }

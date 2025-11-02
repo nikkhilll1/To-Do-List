@@ -1,41 +1,19 @@
 {
-  "version": 2,
+ "version": 2,
   "builds": [
     {
-      "src": "*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.js",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "Images/**",
-      "use": "@vercel/static"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
     }
   ],
   "routes": [
     {
-      "src": "/",
-      "dest": "/StudySync.html"
-    },
-    {
-      "src": "/contact",
-      "dest": "/Contact.html"
-    },
-    {
-      "src": "/Images/(.*)",
-      "dest": "/Images/$1"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/"
     }
-  ],
+  ]
   "outputDirectory": ".",
   "public": true
 }
+
